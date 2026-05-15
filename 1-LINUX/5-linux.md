@@ -34,5 +34,5 @@ Comprendre les autorisations numériques est important car :
 
 De nombreuses commandes Linux utilisent des valeurs numériques (par exemple chmod 755 file)
 Vous pouvez rapidement identifier les risques de sécurité
-Vous pouvez contrôler qui peut accéder aux fichiers sensibles
+Vous pouvez contrôler qui peut accéder aux fichiers sensibles.
 
