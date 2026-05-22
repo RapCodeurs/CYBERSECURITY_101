@@ -28,3 +28,9 @@ Pour L'imstallation de Kali LINUX sur mon PC windows :
         - sudo apt install kali-win-kex
         - sudo kex --win -s  --------> Lancer le mode fenetre l'un des 3 modes graphique 
 
+arreter kali linux 
+
+        - kex --win --stop
+        - wsl -t kali-linux
+
+        
