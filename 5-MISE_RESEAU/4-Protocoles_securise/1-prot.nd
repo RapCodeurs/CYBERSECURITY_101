@@ -1,0 +1,55 @@
+Objectifs d'apprentissage
+
+En terminant cette salle, vous découvrirez :
+
+    - SSL/TLS
+    - Comment sécuriser les protocoles en texte clair existants :
+        HTTP
+        SMTP
+        POP3
+        IMAP
+    - Comment SSHremplacé le texte en clair TELNET
+    - Comment VPNcrée un réseau sécurisé sur un réseau non sécurisé
+
+Tache 1 : HTTP, HTTP sur TLS
+
+Comme nous avons étudié dans le Protocoles de base de mise en réseau chambre, HTTPs'appuie sur TCP et utilise le port 80 par défaut. 
+Nous avons également vu comment tous HTTP le trafic était envoyé en texte clair pour que chacun puisse l'intercepter et le surveiller.
+
+
+HTTPS signifie Hypertext Transfer Protocol Secure. Il s’agit essentiellement de HTTP sur TLS. Par conséquent, demander une page via HTTPS nécessitera les trois étapes suivantes (après avoir résolu le nom de domaine) :
+
+    - Établir un TCP poignée de main à trois avec le serveur cible
+    - Établir une session TLS
+    - Communiquez en utilisant le protocole HTTP ; par exemple, émettez des requêtes HTTP, telles que GET / HTTP/1.1
+
+
+Tache 2 : SMTPS, POP3S, IMAPS ET SSH
+
+OpenSSH offre plusieurs avantages. Nous allons énumérer quelques points clés :
+
+    - Authentification sécurisée: Outre l’authentification par mot de passe, SSH prend en charge l’authentification par clé publique et à deux facteurs.
+    - Confidentialité: OpenSSH fournit un cryptage de bout en bout, protégeant contre les écoutes clandestines. De plus, il vous informe des nouvelles clés de serveur pour vous protéger contre les attaques de l'homme du milieu.
+    - Intégrité: En plus de protéger la confidentialité des données échangées, la cryptographie protège également l’intégrité du trafic.
+    - Creusement de tunnels: SSH peut créer un “tunnel” sécurisé pour acheminer d'autres protocoles via SSH. Cette configuration conduit à une connexion de type VPN.
+    - Transmission X11: Si vous vous connectez à un système de type Unix avec une interface utilisateur graphique, SSH vous permet d'utiliser l'application graphique sur le réseau.
+
+
+Tache 3 : SFTP, FTPS et VPN
+
+SFTP : signifie SSH Protocole de transfert de fichiers et permet un transfert de fichiers sécurisé. ---> Port 22
+FTPS : signifie File Transfer Protocol Secure
+VPN : réseau privé virtuel 
+
+La première approche consiste à utiliser TLS, qui fournit un moyen pratique de sécuriser de nombreux protocoles, tels que HTTP, SMTP, et POP3. Protocoles sécurisés avec TLS obtenez généralement un S, pour Secure, ajouté à leurs noms, tels que HTTPS, SMTPS et POP3S.
+La deuxième approche pour sécuriser le trafic réseau consiste à utiliser SSH. Bien que SSHest principalement utilisé pour l'accès à distance, il peut également transférer des fichiers en toute sécurité et établir des tunnels sécurisés. Créer un SSHtunnel est un choix solide si vous souhaitez transmettre le trafic d'un protocole en texte clair, tel que VNC.
+La dernière approche que nous avons abordée pour sécuriser le trafic réseau consiste à utiliser VPNconnexions. A VPNla connexion est généralement l’option parfaite pour connecter deux succursales d’entreprise.
+
+
+Quel est le nom du protocole sur lequel TLS a été mis à niveau et développé ? : SSL
+Quel type de certificats ne doit pas être utilisé pour confirmer l’authenticité d’un serveur ? : self-signed certificate
+Combien de paquets la négociation et l'établissement TLS ont-ils pris dans les captures d'écran HTTPS de Wireshark ci-dessus ? : 8
+Quel est le numéro du paquet qui contient le GET /login lors de l'accès au site Web via HTTPS ? : 10
+Si vous capturez le trafic réseau, dans lequel des protocoles suivants pouvez-vous extraire les informations de connexion : SMTPS, POP3S ou IMAP ? : IMAP
+Quel est le nom de l'implémentation open source du protocole SSH ? OpenSSH
+Qu'utiliseriez-vous pour connecter les différents sites de l'entreprise afin que les utilisateurs d'un bureau distant puissent accéder aux ressources situées dans la succursale principale ? : VPN
